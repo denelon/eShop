@@ -18,24 +18,6 @@ properties:
         allowPrerelease: true
       settings:
         Ensure: Present
-    ### Install Windows VirtualMachinePlatform
-    ### -------------------------------------
-    - resource: PSDscResources/WindowsOptionalFeature
-      directives:
-        description: Install VirtualMachinePlatform
-        securityContext: elevated
-      settings:
-        name: VirtualMachinePlatform
-        ensure: Present
-    ### Install WSL
-    ### -------------------------------------
-    - resource: PSDscResources/WindowsOptionalFeature
-      directives:
-        description: Install WSL
-        securityContext: elevated
-      settings:
-        name: Microsoft-Windows-Subsystem-Linux
-        ensure: Present
     ### Configure Install Ubuntu
     ### -------------------------------------
     - resource: PSDscResources/Script
